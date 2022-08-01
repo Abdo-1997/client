@@ -1,0 +1,10 @@
+<span *ngIf="this.TotalCount">Showing 
+    <strong>{{(this.PageNumber-1)*(this.PageSize+1)}}-
+      {{
+        this.PageNumber*this.PageSize 
+        > this.TotalCount
+        ?this.TotalCount 
+        :this.PageNumber*this.PageSize
+        }}
+    </strong>
+     Of <Strong>{{this.TotalCount}}</Strong> Results</span>
